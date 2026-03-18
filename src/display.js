@@ -48,6 +48,7 @@ function renderForm() {
   const passwordInput = document.createElement("input");
   passwordInput.type = "password";
   passwordInput.name = "password";
+  passwordInput.pattern = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
   passwordInput.id = "password";
   passwordInput.required = true;
   form.appendChild(passwordInput);
