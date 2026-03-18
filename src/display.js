@@ -51,4 +51,17 @@ function renderForm() {
   passwordValidationInput.id = "password-validation";
   passwordValidationInput.setAttribute("mandatory", true);
   content.appendChild(passwordValidationInput);
+
+  const submitBtn = document.createElement("button");
+  submitBtn.textContent = "Submit";
+  content.appendChild(submitBtn);
+
+  return {
+    emailInput,
+    postalCodeInput,
+    countryInput,
+    passwordInput,
+    passwordValidationInput,
+    submitBtn,
+  };
 }
