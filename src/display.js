@@ -70,6 +70,7 @@ function renderForm() {
   form.appendChild(submitBtn);
 
   return {
+    form,
     emailInput,
     postalCodeInput,
     countryInput,

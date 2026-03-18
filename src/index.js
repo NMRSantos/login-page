@@ -1,3 +1,5 @@
 import { renderForm } from "./display.js";
+import { validateEmail } from "./form.js";
 
-renderForm();
+const { form, emailInput } = renderForm();
+validateEmail(form, emailInput);
