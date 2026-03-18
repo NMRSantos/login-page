@@ -5,7 +5,7 @@ function renderForm() {
 
   const form = document.createElement("form");
   form.id = "form";
-  form.setAttribute("novalidate", true);
+  form.setAttribute("novalidate", false);
   content.appendChild(form);
 
   const emailLabel = document.createElement("label");
