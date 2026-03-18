@@ -13,6 +13,7 @@ function renderForm() {
   content.appendChild(emailLabel);
   const emailInput = document.createElement("input");
   emailInput.id = "email";
+  emailInput.setAttribute("mandatory", true);
   content.appendChild(emailInput);
 
   const postalCodeLabel = document.createElement("label");
@@ -21,6 +22,7 @@ function renderForm() {
   content.appendChild(postalCodeLabel);
   const postalCodeInput = document.createElement("input");
   postalCodeInput.id = "postal-code";
+  postalCodeInput.setAttribute("mandatory", true);
   content.appendChild(postalCodeInput);
 
   const countryLabel = document.createElement("label");
@@ -29,6 +31,7 @@ function renderForm() {
   content.appendChild(countryLabel);
   const countryInput = document.createElement("input");
   countryInput.id = "country";
+  countryInput.setAttribute("mandatory", true);
   content.appendChild(countryInput);
 
   const passwordLabel = document.createElement("label");
@@ -37,6 +40,7 @@ function renderForm() {
   content.appendChild(passwordLabel);
   const passwordInput = document.createElement("input");
   passwordInput.id = "password";
+  passwordInput.setAttribute("mandatory", true);
   content.appendChild(passwordInput);
 
   const passwordValidationLabel = document.createElement("label");
@@ -45,5 +49,6 @@ function renderForm() {
   passwordValidationLabel.textContent = "Confirm password:";
   const passwordValidationInput = document.createElement("input");
   passwordValidationInput.id = "password-validation";
+  passwordValidationInput.setAttribute("mandatory", true);
   content.appendChild(passwordValidationInput);
 }
