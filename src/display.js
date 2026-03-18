@@ -5,7 +5,7 @@ function renderForm() {
 
   const form = document.createElement("form");
   form.id = "form";
-  form.setAttribute("novalidate", false);
+  form.noValidate = true;
   content.appendChild(form);
 
   const emailLabel = document.createElement("label");
@@ -13,8 +13,10 @@ function renderForm() {
   emailLabel.textContent = "Email:";
   form.appendChild(emailLabel);
   const emailInput = document.createElement("input");
+  emailInput.type = "email";
+  emailInput.name = "email";
   emailInput.id = "email";
-  emailInput.setAttribute("mandatory", true);
+  emailInput.required = true;
   form.appendChild(emailInput);
 
   const postalCodeLabel = document.createElement("label");
@@ -22,8 +24,10 @@ function renderForm() {
   postalCodeLabel.textContent = "Postal Code:";
   form.appendChild(postalCodeLabel);
   const postalCodeInput = document.createElement("input");
+  postalCodeInput.type = "text";
+  postalCodeInput.name = "postalCode";
   postalCodeInput.id = "postal-code";
-  postalCodeInput.setAttribute("mandatory", true);
+  postalCodeInput.required = true;
   form.appendChild(postalCodeInput);
 
   const countryLabel = document.createElement("label");
@@ -31,8 +35,10 @@ function renderForm() {
   countryLabel.textContent = "Country:";
   form.appendChild(countryLabel);
   const countryInput = document.createElement("input");
+  countryInput.type = "text";
+  countryInput.name = "country";
   countryInput.id = "country";
-  countryInput.setAttribute("mandatory", true);
+  countryInput.required = true;
   form.appendChild(countryInput);
 
   const passwordLabel = document.createElement("label");
@@ -40,8 +46,10 @@ function renderForm() {
   passwordLabel.textContent = "Password:";
   form.appendChild(passwordLabel);
   const passwordInput = document.createElement("input");
+  passwordInput.type = "password";
+  passwordInput.name = "password";
   passwordInput.id = "password";
-  passwordInput.setAttribute("mandatory", true);
+  passwordInput.required = true;
   form.appendChild(passwordInput);
 
   const passwordValidationLabel = document.createElement("label");
@@ -49,11 +57,15 @@ function renderForm() {
   passwordValidationLabel.textContent = "Confirm password:";
   form.appendChild(passwordValidationLabel);
   const passwordValidationInput = document.createElement("input");
+  passwordValidationInput.type = "password";
+  passwordValidationInput.name = "password-validation";
   passwordValidationInput.id = "password-validation";
-  passwordValidationInput.setAttribute("mandatory", true);
+  passwordValidationInput.required = true;
   form.appendChild(passwordValidationInput);
 
   const submitBtn = document.createElement("button");
+  submitBtn.id = "button";
+  submitBtn.type = "submit";
   submitBtn.textContent = "Submit";
   form.appendChild(submitBtn);
 
